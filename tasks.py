@@ -9,6 +9,7 @@ def pre_commit(c):
     """
     Run pre-commit on all files.
     """
+    c.run("pre-commit install")
     c.run("pre-commit run --all-files")
 
 
