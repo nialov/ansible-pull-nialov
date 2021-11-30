@@ -14,3 +14,10 @@
     hour: "3"
     minute: "30"
     job: "apt update && apt upgrade -y > /var/log/ansible-pull-update.log"
+
+- name: install dummy cron job
+  cron:
+    user: ansible
+    name: "dummy cron job"
+    minute: "*/1"
+    job: "ls -alh >> /var/log/dummy-log.log"
